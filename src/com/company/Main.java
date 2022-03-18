@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        example1();
+        homework4();
     }
 
     public static void example1() {
@@ -118,6 +118,36 @@ public class Main {
         }
 
 
+    }
+
+    public static void homework4() {
+        Queue<String> business = new Queue<>();
+        Queue<String> economy = new Queue<>();
+        business.enqueue("Hugo");
+        business.enqueue("Utu");
+        business.enqueue("Aleksei");
+        economy.enqueue("Oskari");
+        economy.enqueue("Gabriel");
+        economy.enqueue("Chen");
+
+        while (!business.isEmpty() && !economy.isEmpty()) {
+            System.out.println(business.dequeue());
+            if (!business.isEmpty()) {
+                System.out.println(business.dequeue());
+            }
+            System.out.println(economy.dequeue());
+        }
+        if (!business.isEmpty()) {
+            while (!business.isEmpty()) {
+                System.out.println(business.dequeue());
+            }
+        }
+        if (!economy.isEmpty()) {
+            while (!economy.isEmpty()) {
+                System.out.println(economy.dequeue());
+            }
+
+        }
     }
 
 }
